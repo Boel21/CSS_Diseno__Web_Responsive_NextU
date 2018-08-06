@@ -1,0 +1,247 @@
+/*selector universal para todo el html*/
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+/*define el fondo negro y generales*/
+body
+{
+	background: #02010a;
+	font-family: "Dancing Script", cursive;
+	color:#fff;
+	font-weight: bolder;
+}
+/*contenedores hijos*/
+  .title .navbar .Pic1 .ImgL
+  .ImgR .contactos .terminos .redes .derechos
+{
+  width: 100%;
+}
+ /*Contenedores Padres*/
+[class^="k"]
+{
+  width: 100%;
+}
+.contenido div
+{
+  min-width: 150px;
+	box-sizing: border-box;
+	padding: 20px;
+}
+/*contenedor padre del encabezado*/
+.khead
+{
+	background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+	text-shadow: 2px 2px #02010a;
+}
+/*contenedores hijos del encabezado*/
+.title .navbar
+{
+	background-color: inherit;
+}
+/*contenedor padre de la imagen principal*/
+.kImgMain
+{
+	background-color: #82c3a6;
+}
+/*contenedor de la imagen principal*/
+.Pic1
+{
+	background-color:inherit;
+}
+/*contenedor padre de la imagen secuandaria*/
+.kImgSec
+{
+	background-color: #d5c75f;
+  display: flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+	flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px;
+}
+/*contenedores hijos para imagen secuandaria*/
+.ImgL .ImgR
+{
+	background-color:inherit;
+}
+/*contenedor padre del contenido del footer*/
+.kinfo
+{
+	background-color:#C6d5c5;
+  display: flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+	flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+}
+/*contenedores hijos para el contenido del footer*/
+[class$="s"]
+{
+  color: #000;
+	background-color:inherit;
+}
+/*estilos para imagenes adaptativas*/
+img
+{
+  width: 100%;
+  box-shadow: 3px 3px #02010a;
+}
+img[src$=".png"]
+{
+	box-shadow: none !important;
+	width: 10%;
+	padding: 1px;
+}
+/*aninacion del hedader*/
+header
+{
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+@keyframes slidein
+{
+	0%	 {margin-top: 160%;}
+	60%	 {margin-top: -5%;}
+	100% {margin-top: 0%;}
+}
+/*estilos para los likns del navbar*/
+.navbar>a
+{
+	color:#fff;
+	font-weight: bolder;
+  padding:5px;
+  text-decoration: underline;
+  font-size: 25px;
+  text-shadow: none !important;
+}
+/*estilos para las etiquetas h1*/
+h1
+{
+  color:#fff;
+	font-weight: bolder;
+  font-size: 35px;
+}
+/*estilos para las etiquetas h2*/
+h2
+{
+  text-decoration: underline;
+}
+/*estilos para las etiquetas h4*/
+h4
+{
+	font-size: 30px;
+}
+/*Elimina el subrayado del link que corresponde a la pagina actual*/
+.active
+{
+  text-decoration: none !important;
+}
+/*efecto para paisajes*/
+#foto3
+{
+	transition: transform 2s;
+}
+#foto3:hover
+{
+  transform: rotate(10deg);
+  border: 2px solid #82c3a6;
+}
+/*efectos para retratos*/
+#foto2
+{
+	transition: transform 2s;
+}
+#foto2:hover
+{
+  transform: translateX(20px) translatey(-5px);
+  border: 2px solid #82c3a6;
+  transition-duration: 1s;
+}
+/*estilos imagenes pagina 2 y 3*/
+/*filtro blur para imagen 1*/
+#img1
+{
+	filter: blur(10px);
+}
+/*escala de grises para cuadros impares*/
+#img2
+{
+	filter: grayscale(100%);
+}
+#img4{
+	filter: grayscale(100%);
+}
+#img6
+{
+	filter: grayscale(100%);
+}
+#img3
+{
+	filter: sepia(90%);
+}
+/*version movil*/
+@media (min-width: 320px) {
+  .contenido
+  {
+    width: 100%;
+    margin: 0 auto;
+  }
+  [class^="k"]
+  {
+   width: 100%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+  }
+  .kinfo
+  {
+    text-align: left;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: left;
+  }
+/*version desktop*/
+@media (min-width: 900px) {
+.contenido
+{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.kinfo
+{
+  text-align: left;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.khead
+{
+  display: flex;
+  -webkit-flex-flow: row wrap;
+	flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+[class$="s"]
+{
+  width: 25%;
+}
+.kImgSec
+{
+  text-align: center;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content:center;
+}
+}
+}
